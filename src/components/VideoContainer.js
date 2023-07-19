@@ -10,7 +10,7 @@ const VideoContainer = () => {
 
   useEffect(() => {
     isSearched ? fetchSearchVideos() : fetchVideos();
-  }, [searchQueryText]);
+  }, [searchQueryText, isSearched]);
 
   const fetchVideos = async () => {
     const data = await fetch(YOUTUBE_API_KEY);

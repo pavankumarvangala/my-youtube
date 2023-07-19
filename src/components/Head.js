@@ -20,7 +20,7 @@ const Head = () => {
     return () => {
       clearTimeout(timer);
     };
-  }, [searchQuery]);
+  }, [searchQuery, cacheValues]);
 
   const getSearchSugesstions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_URL + searchQuery);
