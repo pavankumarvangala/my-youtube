@@ -7,4 +7,4 @@ export const YOUTUBE_SEARCH_URL =
 
 export const SEARCH_QUERY_API = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=${GOOGLE_API_KEY}&q=`;
 
-//   [YOUR_SEARCH_TEXT]&key=[YOUR_API_KEY]'
+export const LIVE_CHAT_COUNT = 25;

@@ -14,13 +14,14 @@ const Head = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (cacheValues[searchQuery]) setSuggesstions(cacheValues[searchQuery]);
-      else getSearchSugesstions();
+      cacheValues[searchQuery]
+        ? setSuggesstions(cacheValues[searchQuery])
+        : getSearchSugesstions();
     }, 200);
     return () => {
       clearTimeout(timer);
     };
-  }, [searchQuery, cacheValues]);
+  }, [searchQuery]);
 
   const getSearchSugesstions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_URL + searchQuery);
